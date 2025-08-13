@@ -9,9 +9,9 @@ load_dotenv()
 
 LINK = "https://www.amazon.com/dp/B075CYMYK6?th=1"
 
-# change if needed (check your header here: https://myhttpheader.com/)
-header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0",
-          "Accept-Language": "en-US,en;q=0.5"}
+# change the parameters for your browser, you can also add some more parameters if you want to (check your header here: https://myhttpheader.com/)
+header = {"User-Agent": "",
+          "Accept-Language": ""}
 
 response = requests.get(LINK,headers=header)
 
@@ -29,3 +29,4 @@ if price < 100:
         connection.starttls()
         connection.login(os.environ["EMAIL_ADDRESS"], os.environ["EMAIL_PASSWORD"])
         connection.sendmail(from_addr=os.environ["EMAIL_ADDRESS"],to_addrs=os.environ["EMAIL_ADDRESS"],msg=f"Subject: Amazon price alert\nInstant pot is now {price}$\nlink: {LINK}")
+
