@@ -1,12 +1,7 @@
 # Amazon-price-tracker
 A python script that checks the price for a particular product based on your target price and sends an email to alert you about the discount
 
-Create a .env file with your credentials. It should look something like this:
-
-SMTP_ADDRESS="insert your email provider's address"
-EMAIL_ADDRESS="yourmail@mail.com"
-EMAIL_PASSWORD="your app password"
-
+Modify the .env file and insert your credentials.
 
 To get an app password, follow the guides provided here, otherwise, find the guide for your particular provider.
 
